@@ -1,5 +1,5 @@
-var y=100;
-var d=80;
+//var y=100;
+//var d=80;
 
 //creating arrays for each personality type
 var conscient = [100,80];
