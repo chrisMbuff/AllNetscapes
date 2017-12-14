@@ -1,6 +1,6 @@
 //var y=100;
 //var d=80;
-
+//working code
 //creating arrays for each personality type
 var conscient = [100,80];
 var agree = [100,80];
