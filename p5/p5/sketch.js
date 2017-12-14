@@ -8,7 +8,7 @@ var neuro = [100,80];
 var open = [100,80];
 var extra = [100,80];
 
-
+//test
 function setup() {
     createCanvas(400, 900);
 }
