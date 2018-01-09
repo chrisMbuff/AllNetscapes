@@ -1,3 +1,7 @@
+/*
+made by Steph and Chris
+*/
+
 //13 = red 12= green 11 = blue
 char dump;
 String ledControlColourchar="";
