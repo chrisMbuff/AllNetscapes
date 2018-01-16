@@ -44,10 +44,10 @@ body {
   transition: background .15s ease-in-out;
 }
 .range-slider__range::-webkit-slider-thumb:hover {
-  background: #1abc9c;
+  background: #d3ace5;
 }
 .range-slider__range:active::-webkit-slider-thumb {
-  background: #1abc9c;
+  background: #d3ace5;
 }
 .range-slider__range::-moz-range-thumb {
   width: 20px;
@@ -100,19 +100,19 @@ input::-moz-focus-outer {
   border: 0;
 }
 
-#heading {
+#C {
   margin-bottom: 0px;
   margin-top: 0px;
   margin-left: 40%;
 }
 
 .title {
-  margin-top: 100px;
+  margin-top: 0px;
   margin-left: 40%;
   margin-bottom: 0px;
 }
 .wrapper {
-  display: grid;
+ display: grid;
  grid-template-columns: repeat(3, 1fr);
  grid-gap: 10px;
  grid-auto-rows: minmax(100px, auto);
