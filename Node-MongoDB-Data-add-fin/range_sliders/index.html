@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HTML Sliders with Database Connection -->
+    <!-- Original slider code by Gintare - modified from code by Sean Stopnik?  -->
+    <meta charset="UTF-8">
+    <title>CSS Range Slider</title>
+    <link rel='stylesheet prefetch' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
+    <link rel="stylesheet" href="css/style.css"> </head>
+    <script scr="js/db_connect.js"></script>
+
+<body>
+    <form action="/add" method="POST">
+
+      <!-- CONSCIENTIOUSNESS SECTION -->
+      <div style="background-color:#62b4fc; padding:80px;">
+        <h4 id="C" style="color:white;">Conscientiousness</h4>
+        <div class="range-slider">
+
+            <div class="wrapper">
+                <p class="one">Organized</p>
+                <p class="two">Unorganized</p>
+            </div>
+            <input name="orgaIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+
+            <div class="wrapper">
+                <p class="one">Disciplined</p>
+                <p class="two">Impulsive</p>
+            </div>
+            <input name="discIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+
+            <div class="wrapper">
+                <p class="one">Carefull</p>
+                <p class="two">Careless</p>
+            </div>
+            <input name="careIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+        </div> </div>
+
+        <!-- AGREEABLENESS SECTION -->
+        <div style="background-color:#ff289b; padding:80px;">
+        <h4 class="title" style="color:#000000;">Agreeableness</h4>
+        <div class="range-slider">
+            <div class="wrapper">
+                <p class="one">Kind</p>
+                <p class="two">Ruthless</p>
+            </div>
+            <input name="kindIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Trusting</p>
+                <p class="two">Suspicious</p>
+            </div>
+            <input class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Helpful</p>
+                <p class="two">Uncooperative</p>
+            </div>
+            <input name="helpIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+          </div> </div>
+
+        <!-- NEUROTICISM SECTION -->
+        <div style="background-color:#fff684; padding:80px;">
+        <h4 class="title" style="color:#000000;">Neuroticism (emotional stability)</h4>
+        <div class="range-slider">
+            <div class="wrapper">
+                <p class="one">Calm</p>
+                <p class="two">Anxious</p>
+            </div>
+            <input name="calmIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Secure</p>
+                <p class="two">Insecure</p>
+            </div>
+            <input name="secuIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Self-satisfied</p>
+                <p class="two">Self-pitying</p>
+            </div>
+            <input name="selfIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+          </div> </div>
+
+        <!-- OPENNESS SECTION -->
+        <div style="background-color:#ffaa32; padding:80px;">
+        <h4 class="title" style="color:#000000;">Openness</h4>
+        <div class="range-slider">
+            <div class="wrapper">
+                <p class="one">Imaginative</p>
+                <p class="two">Practical</p>
+            </div>
+            <input name="imagIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Prefer Variety</p>
+                <p class="two">Prefer Routine</p>
+            </div>
+            <input name="variIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Independent</p>
+                <p class="two">Comforming</p>
+            </div>
+            <input name="indIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+          </div> </div>
+
+      <!-- EXTRAVERSION SECTION -->
+      <div style="background-color:#fc6655; padding:80px;">
+        <h4 class="title" style="color:#000000;">Extraversion</h4>
+        <div class="range-slider">
+            <div class="wrapper">
+                <p class="one">Sociable</p>
+                <p class="two">Shy</p>
+            </div>
+            <input name="socIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Fun-loving</p>
+                <p class="two">Serious</p>
+            </div>
+            <input name="funIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+            <div class="wrapper">
+                <p class="one">Affectionate</p>
+                <p class="two">Reserved</p>
+            </div>
+            <input name="affIn" class="range-slider__range" type="range" value="4" min="1" max="8">
+          </div></div>
+        <input type="submit" value="Generate" />
+    </form>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
