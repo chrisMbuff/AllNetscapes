@@ -146,7 +146,7 @@ input::-moz-focus-outer {
 .button:hover {background-color: #cc81ef}
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #cc81ef;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
