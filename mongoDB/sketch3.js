@@ -23,7 +23,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight - 4);
   smooth(8);
   noStroke();
-  readDatabase();
+  setInterval(readDatabase,1000);//checks database for new entries every second
 }
 
 function readDatabase(){
@@ -38,10 +38,6 @@ function draw() {
 
   var a = 255;
 
-  if (second() == 0 || second() == 15 || second() == 30 || second() == 45)
-  {
-	readDatabase(); //checks database for new entries every 15 seconds
-
     if (globalData)
     {
       randomSeed(4);
@@ -52,28 +48,23 @@ function draw() {
       kindMap = map(kind, 0, 8, 255, 255); // color mapping of kind -- slider from 0 to 8, so colour from 0 to 255
       trustMap = map(trust, 0, 8, 2, 140);
       helpMap = map(help, 0, 8, 208, 233);
-      console.log("Kindness is: " + kind);
-      console.log("Trust is: " + trust);
-      console.log("Help is: " + help);
 
       //size of the bubble
       radiusGen = kind + trust + help;
-      console.log("Radius will be: " + radiusGen);
 
       speedMapX = map(kind, 0, 8, 0, 8);
       speedMapY = map(trust, 0, 8, 0, 8);
-      console.log("Kindness map is: " + kindMap);
-      console.log("Trust map is: " + trustMap);
-      console.log("Help map is: " + helpMap);
+
       time = (frameCount % frames) / float(frames);
+      push(); // Start a new drawing state
       for (var i = 0; i < globalData.length; i++)
       {
         fillcol = color(kindMap,trustMap,helpMap,a);
         fill(fillcol);
-        ellipse(x,y,-radiusGen*time,-radiusGen);
+        ellipse(x,y*time,-radiusGen,-radiusGen);
       }
       theta += TWO_PI / frames;
-    }
+      pop(); // Restore original state
   }
 }
 
@@ -103,7 +94,7 @@ function drawData(data) {
     fun = data[data.length-1].Data_Canoe.Extraversion.Fun; //Selects all the
     affec = data[data.length-1].Data_Canoe.Extraversion.Affect;
   }
-/*  console.log("Kindness is: " + kind);
+  console.log("Kindness is: " + kind);
   console.log("Trust is: " + trust);
   console.log("Help is: " + help);
 
@@ -111,7 +102,7 @@ function drawData(data) {
 
   console.log("Kindness map is: " + kindMap);
   console.log("Trust map is: " + trustMap);
-  console.log("Help map is: " + helpMap);*/
+  console.log("Help map is: " + helpMap);
 
 }
 
