@@ -1,0 +1,48 @@
+body {
+	background: grey;
+	min-height: 500px;
+}
+
+.butterfly {
+  position:fixed;
+	margin-top:2%;
+	top: 20%;
+  left: 50%;
+  width: 30px;
+  height: 200px;
+	background-color: black;
+  -moz-border-radius: 25px 75px;
+  -webkit-border-radius: 25px 75px;
+
+}
+
+
+.rightwing {
+	position: fixed;
+  right: 50%;
+  border-top: 70px solid transparent;
+	border-left: 140px solid blue;
+	border-bottom: 70px solid transparent;
+	border-radius: 60px 0px 60px 90px; // Softens corners
+			transform: rotateY(-30deg);
+      transform-origin: RIGHT;
+  	animation:flap-r 1.5s infinite;
+}
+.leftwing {
+		position: fixed;
+    left: 52%;
+	  border-top: 70px solid transparent;
+    border-right: 140px solid red;
+    border-bottom: 70px solid transparent;
+	  border-radius: 0px 60px 90px 60px; //softens corner
+		transform: rotateY(30deg);
+    transform-origin: LEFT;
+    animation:flap-l 1.5s infinite;
+}
+
+@keyframes flap-l { /* Percentage timeline followed by rotation degree (from starter pos)*/
+  50% { transform: rotateY(70deg); }
+}
+@keyframes flap-r {
+  50% { transform: rotateY(-70deg); }
+}
