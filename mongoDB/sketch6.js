@@ -37,6 +37,9 @@ function draw() {
   background("#000000");
   //frameCount contains the number of frames displayed since the program started
   time = (frameCount % frames) / float(frames);
+  for (var i = 0; i < num; i++) {
+    drawBubble(i);
+  }
   if(globalData)
   {
     for (var i = 0; i < globalData.length; i++) {
@@ -47,9 +50,7 @@ function draw() {
       drawE(i);
     }
   }
-  for (var i = 0; i < num; i++) {
-    drawBubble(i);
-  }
+
   theta += TWO_PI / frames;
 
 }
