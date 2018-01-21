@@ -78,73 +78,77 @@ function drawData(data) {
     affec = data[data.length-1].Data_Canoe.Extraversion.Affect;
   }
 
-  console.log("Care is: " + care);
+  /*console.log("Care is: " + care);
   console.log("Organized is: " + orga);
-  console.log("Disc is: " + disc);
+  console.log("Disc is: " + disc);*/
 
-  console.log("Kindness is: " + kind);
+  /*console.log("Kindness is: " + kind);
   console.log("Trust is: " + trust);
-  console.log("Help is: " + help);
+  console.log("Help is: " + help);*/
 
   console.log("Social is: " + socia);
   console.log("Fun-loving is: " + fun);
   console.log("affectionate is: " + affec);
 
+  console.log("Calm is: " + calm);
+  console.log("Secure is: " + secure);
+  console.log("Self is: " + self);
+
 }
 
-// ** Conscientiousness ** //
+// ** Conscientiousness ** BLUE//
 function drawC(i) {
   // defining the coordinates of the bubble
-  var x = (width,100);
-  var y = (height,100);
+  /*var x = (width,100);
+  var y = (height,100);*/
 
   //defines size of the bubble
   var m = map(sin(theta + (TWO_PI / 20) * i), -1, 1, .5, 2);
   var sz;
 
   push();
-  translate(x, y);
+  //translate(x, y);
 
   // **colours of the circles for each trait** //
-  //for (var i = 0; i < globalData.length; i++)
-  //{
+  for (var i = 0; i < globalData.length; i++)
+  {
     if(disc == 8) {
-      sz = random(care*30, orga*30) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,170,0);
       greens = map((orga * i),0,8,0,120);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 7) {
-      sz = random(care*20, orga*20) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,140,0);
       greens = map((orga * i),0,8,0,140);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 6) {
-      sz = random(care*20, orga*20) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,120,0);
       greens = map((orga * i),0,8,0,160);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 5) {
-      sz = random(care*20, orga*20) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,100,0);
       greens = map((orga * i),0,8,0,180);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 4) {
-      sz = random(care*30, orga*30) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,80,0);
       greens = map((orga * i),0,8,0,200);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 3) {
-      sz = random(care*40, orga*40) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,40,0);
       greens = map((orga * i),0,8,0,240);
       fill(reds,greens,255,random(255));
@@ -158,66 +162,66 @@ function drawC(i) {
       ellipse(200, 400, sz, sz);
     }
     else if (disc == 1) {
-      sz = random(care*60, orga*60) * m;
+      sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,10,0);
       greens = map((orga * i),0,8,0,250);
       fill(reds,greens,255,random(255));
       ellipse(200, 400, sz, sz);
     }
 
-  //}
+  }
 
   pop();
 }
 
-// ** Agreeableness ** //
+// ** Agreeableness ** GREEN//
 function drawA(i) {
 
   var m = map(sin(theta + (TWO_PI / 20) * i), -1, 1, .5, 2);
   var sz;
 
   push();
-  //translate(x, y);
 
     // **colours of the circles for each trait** //
-
+    for (var i = 0; i < globalData.length; i++)
+    {
     if(help == 8) {
-      sz = random(kind*20, trust*20) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,190);
       blues = map((trust * i),0,8,0,90);
       fill(reds,255,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
     else if (help == 7) {
-      sz = random(kind*20, trust*20) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,200);
       blues = map((trust * i),0,8,0,100);
       fill(reds,15,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
     else if (help == 6) {
-      sz = random(kind*20, trust*20) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,210);
       blues = map((trust * i),0,8,0,110);
       fill(reds,255,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
     else if (help == 5) {
-      sz = random(kind*20, trust*20) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,220);
       blues = map((trust * i),0,8,0,120);
       fill(reds,255,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
     else if (help == 4) {
-      sz = random(kind*30, trust*30) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,230);
       blues = map((trust * i),0,8,0,130);
       fill(reds,255,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
     else if (help == 3) {
-      sz = random(kind*40, trust*40) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,240);
       blues = map((trust * i),0,8,0,150);
       fill(reds,255,blues,random(255));
@@ -231,16 +235,17 @@ function drawA(i) {
       ellipse(550, 200, sz, sz);
     }
     else if (help == 1) {
-      sz = random(kind*60, trust*60) * m;
+      sz = random(kind*50, trust*50) * m;
       reds = map((kind * i),0,8,0,260);
       blues = map((trust * i),0,8,0,255);
       fill(reds,255,blues,random(255));
       ellipse(550, 200, sz, sz);
     }
+  }
   pop();
 }
 
-// ** Neuroticism ** //
+// ** Neuroticism ** YELLOW//
 function drawN(i) {
 
   var m = map(sin(theta + (TWO_PI / 20) * i), -1, 1, .5, 2);
@@ -249,44 +254,45 @@ function drawN(i) {
   push();
 
     // **colours of the circles for each trait** //
-
+    for (var i = 0; i < globalData.length; i++)
+    {
     if(self == 8) {
-      sz = random(calm*20, secure*20) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,110,255);
       blues = map((secure * i),0,8,0,90);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 7) {
-      sz = random(calm*20, secure*20) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,130,255);
       blues = map((secure * i),0,8,0,100);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 6) {
-      sz = random(calm*20, secure*20) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,150,255);
       blues = map((secure * i),0,8,0,110);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 5) {
-      sz = random(calm*20, secure*20) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,170,255);
       blues = map((secure * i),0,8,0,120);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 4) {
-      sz = random(calm*30, secure*30) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,190,255);
       blues = map((secure * i),0,8,0,130);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 3) {
-      sz = random(calm*40, secure*40) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,210,255);
       blues = map((secure * i),0,8,0,140);
       fill(reds,255,blues,random(255));
@@ -300,17 +306,17 @@ function drawN(i) {
       ellipse(1000, 200, sz, sz);
     }
     else if (self == 1) {
-      sz = random(calm*60, secure*60) * m;
+      sz = random(calm*50, secure*50) * m;
       reds = map((calm * i),0,8,250,255);
       blues = map((secure * i),0,8,0,160);
       fill(reds,255,blues,random(255));
       ellipse(1000, 200, sz, sz);
     }
-
+}
   pop();
 }
 
-// ** Openness ** //
+// ** Openness ** ORANGE//
 function drawO(i) {
 
   var m = map(sin(theta + (TWO_PI / 20) * i), -1, 1, .5, 2);
@@ -319,67 +325,69 @@ function drawO(i) {
   push();
 
     // **colours of the circles for each trait** //
-
+    for (var i = 0; i < globalData.length; i++)
+    {
     if(inde == 8) {
-      sz = random(imag*20, variety*20) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,233,0);
       blues = map((variety * i),0,8,0,0);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 7) {
-      sz = random(imag*20, variety*20) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,223,0);
       blues = map((variety * i),0,8,0,33);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 6) {
-      sz = random(imag*20, variety*20) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,200,0);
       blues = map((variety * i),0,8,0,53);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 5) {
-      sz = random(imag*20, variety*20) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,0,200);
       blues = map((variety * i),0,8,0,20);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 4) {
-      sz = random(imag*30, variety*30) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,0,200);
       blues = map((variety * i),0,8,0,40);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 3) {
-      sz = random(imag*40, variety*40) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,0,200);
       blues = map((variety * i),0,8,0,50);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 2) {
       sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,0,200);
       blues = map((variety * i),0,8,0,70);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
     else if (inde == 1) {
-      sz = random(imag*60, variety*60) * m;
+      sz = random(imag*50, variety*50) * m;
       greens = map((imag * i),0,8,0,209);
       blues = map((variety * i),0,8,0,90);
       fill(255,greens,blues,random(255));
-      ellipse(1100, 400, sz, sz);
+      ellipse(1200, 500, sz, sz);
     }
+  }
   pop();
 }
 
-// ** Extraversion ** //
+// ** Extraversion ** RED//
 function drawE(i) {
 
   var m = map(sin(theta + (TWO_PI / 20) * i), -1, 1, .5, 2);
@@ -388,62 +396,64 @@ function drawE(i) {
   push();
 
     // **colours of the circles for each trait** //
-
+    for (var i = 0; i < globalData.length; i++)
+    {
     if(affec == 8) {
-      sz = random(socia*20, fun*20) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,5);
       blues = map((fun * i),0,8,0,10);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 7) {
-      sz = random(socia*20, fun*20) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,5);
       blues = map((fun * i),0,8,0,20);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 6) {
-      sz = random(socia*20, fun*20) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,6);
       blues = map((fun * i),0,8,0,22);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 5) {
-      sz = random(socia*20, fun*20) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,7);
       blues = map((fun * i),0,8,0,23);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 4) {
-      sz = random(socia*30, fun*30) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,8);
       blues = map((fun * i),0,8,0,30);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 3) {
-      sz = random(socia*40, fun*40) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,9);
       blues = map((fun * i),0,8,0,40);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 2) {
       sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,9);
       blues = map((fun * i),0,8,0,50);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
     else if (affec == 1) {
-      sz = random(socia*60, fun*60) * m;
+      sz = random(socia*50, fun*50) * m;
       greens = map((socia * i),0,8,0,9);
       blues = map((fun * i),0,8,0,60);
       fill(255,greens,blues,random(255));
-      ellipse(800, 100, sz, sz);
+      ellipse(800, 400, sz, sz);
     }
+  }
   pop();
 }
