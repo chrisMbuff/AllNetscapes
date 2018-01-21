@@ -9,7 +9,7 @@ body {
 }
 @media (min-width: 600px) {
   body {
-    padding: 60px;
+    padding: 5px;
   }
 }
 
@@ -99,13 +99,7 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
 }
-
-#C {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  margin-left: 40%;
-}
-
+/* The style of trait blocks */
 .title {
   margin-top: 0px;
   margin-left: 40%;
@@ -128,6 +122,7 @@ input::-moz-focus-outer {
   margin-right: 80px;
 }
 
+/* Submit Button */
 .button {
   display: inline-block;
   padding: 15px 25px;

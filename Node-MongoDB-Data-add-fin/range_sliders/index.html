@@ -7,15 +7,21 @@
     <meta charset="UTF-8">
     <title>CSS Range Slider</title>
     <link rel='stylesheet prefetch' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+
     <script scr="js/db_connect.js"></script>
+  </head>
 
 <body>
+  <!-- Modal button -->
+  <button class="button" id="myBtn">Descriptions</button>
+
     <form action="/add" method="POST">
 
       <!-- CONSCIENTIOUSNESS SECTION -->
       <div style="background-color:#62b4fc; padding:80px;">
-        <h4 id="C" style="color:#000000;">Conscientiousness</h4>
+        <h4 class="title" style="color:#000000;">Conscientiousness</h4>
         <div class="range-slider">
 
             <div class="wrapper">
@@ -122,9 +128,43 @@
           </div></div>
         <input class="button" type="submit" value="Generate" />
     </form>
+    <!-- Code for the modal -->
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Traits of the Big Five personality test</h2>
+        </div>
+        <div class="modal-body">
+          <h4>Conscientiousness</h4>
+          <p>People that have a high degree of conscientiousness are reliable and prompt.
+            Traits include being organized, methodic, and thorough.</p>
+          <h4>Agreeableness</h4>
+          <p>These individuals are friendly, cooperative, and compassionate.
+             People with low agreeableness may be more distant. Traits include being kind, affectionate, and sympathetic.</p>
+          <h4>Openness</h4>
+          <p>People who like to learn new things and enjoy new experiences usually score high in openness.
+            Openness includes traits like being insightful and imaginative and having a wide variety of interests.</p>
+          <h4>Neuroticism</h4>
+          <p>Neuroticism is also sometimes called Emotional Stability. This dimension relates to one’s emotional stability and degree of negative emotions.
+            People that score high on neuroticism often experience emotional instability and negative emotions. Traits include being moody and tense.</p>
+          <h4>Extraversion</h4>
+          <p>Extraverts get their energy from interacting with others, while introverts get their energy from within themselves.
+            Extraversion includes the traits of energetic, talkative, and assertive.</p>
+        </div>
+        <div class="modal-footer">
+          <h4><a href="https://www.123test.com/big-five-personality-theory/" target="_blank">Descriptions are from 123test.com</a></h4>
+        </div>
+      </div>
+    </div>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
     <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
