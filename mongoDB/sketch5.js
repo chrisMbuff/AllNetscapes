@@ -117,56 +117,56 @@ function drawC(i) {
       reds = map((care * i),0,8,170,0);
       greens = map((orga * i),0,8,0,120);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 7) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,140,0);
       greens = map((orga * i),0,8,0,140);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 6) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,120,0);
       greens = map((orga * i),0,8,0,160);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 5) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,100,0);
       greens = map((orga * i),0,8,0,180);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 4) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,80,0);
       greens = map((orga * i),0,8,0,200);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 3) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,40,0);
       greens = map((orga * i),0,8,0,240);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 2) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,30,0);
       greens = map((orga * i),0,8,0,230);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
     else if (disc == 1) {
       sz = random(care*50, orga*50) * m;
       reds = map((care * i),0,8,10,0);
       greens = map((orga * i),0,8,0,250);
       fill(reds,greens,255,random(255));
-      ellipse(200, 400, sz, sz);
+      ellipse(300, 400, sz, sz);
     }
 
   }
