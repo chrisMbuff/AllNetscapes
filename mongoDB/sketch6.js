@@ -462,11 +462,11 @@ function drawCircles(i)
 {
   // ** Conscientiousness ** BLUE//
   fill(0, 161, 255,40);
-  ellipse(200,700,care*40,care*40);
+  ellipse(300,700,care*40,care*40);
   fill(89, 193, 255,40);
-  ellipse(220,700,orga*40,orga*40);
+  ellipse(320,700,orga*40,orga*40);
   fill(155, 217, 255,40);
-  ellipse(240,700,disc*40,disc*40);
+  ellipse(340,700,disc*40,disc*40);
   // ** Agreeableness ** GREEN//
   fill(0, 255, 63,40);
   ellipse(500,700,kind*40,kind*40);
@@ -474,27 +474,27 @@ function drawCircles(i)
   ellipse(520,700,trust*40,trust*40);
   fill(140, 255, 168,40);
   ellipse(540,700,help*40,help*40);
-  // ** Neuroticism ** YELLOW//
-  fill(255, 246, 0,40);
-  ellipse(700,700,calm*40,calm*40);
-  fill(255, 248, 68,40);
-  ellipse(720,700,secure*40,secure*40);
-  fill(255, 250, 124,40);
-  ellipse(740,700,self*40,self*40);
-  // ** Openness ** ORANGE//
-  fill(255, 123, 0,40);
-  ellipse(1000,700,imag*40,imag*40);
-  fill(252, 147, 50,40);
-  ellipse(1020,700,variety*40,variety*40);
-  fill(255, 170, 91,40);
-  ellipse(1040,700,inde*40,inde*40);
   // ** Extraversion ** RED//
   fill(255, 0, 0,40);
-  ellipse(1300,700,fun*40,fun*40);
+  ellipse(700,700,fun*40,fun*40);
   fill(255, 43, 43,40);
-  ellipse(1320,700,socia*40,socia*40);
+  ellipse(720,700,socia*40,socia*40);
   fill(255, 91, 91,40);
-  ellipse(1340,700,affec*40,affec*40);
+  ellipse(740,700,affec*40,affec*40);
+  // ** Neuroticism ** YELLOW//
+  fill(255, 246, 0,40);
+  ellipse(900,700,calm*40,calm*40);
+  fill(255, 248, 68,40);
+  ellipse(920,700,secure*40,secure*40);
+  fill(255, 250, 124,40);
+  ellipse(940,700,self*40,self*40);
+  // ** Openness ** ORANGE//
+  fill(255, 123, 0,40);
+  ellipse(1100,700,imag*40,imag*40);
+  fill(252, 147, 50,40);
+  ellipse(1120,700,variety*40,variety*40);
+  fill(255, 170, 91,40);
+  ellipse(1140,700,inde*40,inde*40);
 }
 
 // ** Code for background is the original code by Jerome Herr** //
