@@ -1,0 +1,20 @@
+call with: breathe();
+
+void breathe() {
+  //BELOW: BREATHING EFFECT
+  for(int i=0; i < 3; i++){
+       for (int i=1; i<10; i++) { //get brighter
+        strip.setBrightness(i);
+        delay(20);
+        strip.show();
+        delay(20);
+        }
+    for (int i=10; i>1; i--) { //get darker
+      strip.setBrightness(i);
+      delay(20);
+      strip.show(); 
+      delay(20);
+    }
+  }
+    // if getamessage is true, break 
+}
