@@ -15,7 +15,7 @@ var frames = 240,
 var rs;
 
 var reds, greens, blues;
-// Code is from codepen.io by Jerome Herr. Available at: https://codepen.io/p5art/pen/PqpwgO
+// Code is from codepen.io by Jerome Herr and has been modified by Gintare. Available at: https://codepen.io/p5art/pen/PqpwgO
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight - 4);
@@ -497,7 +497,7 @@ function drawCircles(i)
   ellipse(1340,700,affec*40,affec*40);
 }
 
-// ** Code for background ** //
+// ** Code for background is the original code by Jerome Herr** //
 function drawBubble(i) {
   var x = random(width);
   var y = random(height);
