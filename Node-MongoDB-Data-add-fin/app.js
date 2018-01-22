@@ -1,3 +1,13 @@
+/*
+  code built with help from Chris Booth
+  Modified dle code for sending to DB
+  includes code referenced from BSP documentation - blluetooth-serial-port https://www.npmjs.com/package/bluetooth-serial-port
+  & ref from express docs - https://expressjs.com/en/guide/routing.html
+  & json body parser - https://www.npmjs.com/package/body-parser-json
+  & path - https://nodejs.org/api/path.html
+  & ref Mongo Client - https://mongodb.github.io/node-mongodb-native/api-generated/mongoclient.html
+*/
+
 var express = require('express');
 var app = express();
 
@@ -5,6 +15,26 @@ var path = require('path');
 var MongoClient = require('mongodb').MongoClient
 
 var db = require('./config/db.js');
+
+//below: Create bluetooth connection
+var btConn = require('bluetooth-serial-port');  // include Bluetooth serial
+var serial = new btConn.BluetoothSerialPort();
+var btAddress;
+
+
+serial.on('found', function returnFound(btAddress, name) { //run function every time found event happens, returns address and name of found device
+    if (name == 'HC-05') {
+      serial.findSerialPortChannel(btAddress, function(channel) { //checks if device has serial port running, returns channel you need to use
+        serial.connect(btAddress, channel, function connectSuccess() {  //connect to remote bluetooth device, only connects when function gets called - asynchronus/runs in bg
+        serial.write(new Buffer('a', 'utf-8'), function(err, bytesWritten) { //write to bluetooth device - 'a' is setup to turn LED on
+        });
+      });
+    });
+  }
+});
+
+serial.inquire(); //Start searching for bluetooth device - asynchronous/runs in bg
+
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
