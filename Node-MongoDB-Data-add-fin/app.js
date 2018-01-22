@@ -50,6 +50,7 @@ app.listen(3000, () => console.log('Example app listening on port 3000!'));
 app.post('/add', (req, res) => {
     serial.write(new Buffer('a', 'utf-8'), function(err, bytesWritten) { //write to bluetooth device - 'b' is begin RGB & breathe
         });
+  res.redirect('/index.html');
 
     var name = "Steph";
     var careIn = req.body.careIn;
