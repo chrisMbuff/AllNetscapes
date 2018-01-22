@@ -48,31 +48,11 @@ function draw() {
       drawN(i);
       drawO(i);
       drawE(i);
+      drawCircles(i);
     }
   }
 
   theta += TWO_PI / frames;
-
-}
-
-// ** Code for background ** //
-function drawBubble(i) {
-  var x = random(width);
-  var y = random(height);
-  var sc = random(1, 3);
-  var rotation = random(-.01, 0.1);
-  var m = map(sin(theta + (TWO_PI / num) * i), -1, 1, .5, 2);
-  var sz = random(20, 50) * m;
-  push();
-  scale(sc);
-  translate(x, y);
-  rotate(rotation);
-  fill('rgba(255,73,86,.8)');
-  if (random(1) > .8) fill('rgba(189,21,80, .8)');
-  if (random(1) > .9) fill('rgba(213,255,107, .8)');
-  ellipse(0, -time * height + height, sz, sz);
-  ellipse(0, -time * height, sz, sz);
-  pop();
 }
 
 function drawData(data) {
@@ -102,9 +82,9 @@ function drawData(data) {
     affec = data[data.length-1].Data_Canoe.Extraversion.Affect;
   }
 
-  /*console.log("Care is: " + care);
+  console.log("Care is: " + care);
   console.log("Organized is: " + orga);
-  console.log("Disc is: " + disc);*/
+  console.log("Disc is: " + disc);
 
   /*console.log("Kindness is: " + kind);
   console.log("Trust is: " + trust);
@@ -188,10 +168,9 @@ function drawC(i) {
       fill(reds,greens,255,random(255));
       ellipse(300, 400, sz, sz);
     }
-
   }
-
   pop();
+
 }
 
 // ** Agreeableness ** GREEN//
@@ -475,5 +454,66 @@ function drawE(i) {
       ellipse(800, 400, sz, sz);
     }
   }
+  pop();
+}
+
+// ** Set circles of each trait** //
+function drawCircles(i)
+{
+  // ** Conscientiousness ** BLUE//
+  fill(0, 161, 255,40);
+  ellipse(200,700,care*40,care*40);
+  fill(89, 193, 255,40);
+  ellipse(220,700,orga*40,orga*40);
+  fill(155, 217, 255,40);
+  ellipse(240,700,disc*40,disc*40);
+  // ** Agreeableness ** GREEN//
+  fill(0, 255, 63,40);
+  ellipse(500,700,kind*40,kind*40);
+  fill(86, 255, 128,40);
+  ellipse(520,700,trust*40,trust*40);
+  fill(140, 255, 168,40);
+  ellipse(540,700,help*40,help*40);
+  // ** Neuroticism ** YELLOW//
+  fill(255, 246, 0,40);
+  ellipse(700,700,calm*40,calm*40);
+  fill(255, 248, 68,40);
+  ellipse(720,700,secure*40,secure*40);
+  fill(255, 250, 124,40);
+  ellipse(740,700,self*40,self*40);
+  // ** Openness ** ORANGE//
+  fill(255, 123, 0,40);
+  ellipse(1000,700,imag*40,imag*40);
+  fill(252, 147, 50,40);
+  ellipse(1020,700,variety*40,variety*40);
+  fill(255, 170, 91,40);
+  ellipse(1040,700,inde*40,inde*40);
+  // ** Extraversion ** RED//
+  fill(255, 0, 0,40);
+  ellipse(1300,700,fun*40,fun*40);
+  fill(255, 43, 43,40);
+  ellipse(1320,700,socia*40,socia*40);
+  fill(255, 91, 91,40);
+  ellipse(1340,700,affec*40,affec*40);
+}
+
+// ** Code for background ** //
+function drawBubble(i) {
+  var x = random(width);
+  var y = random(height);
+  var sc = random(1, 3);
+  var rotation = random(-.01, 0.1);
+  var m = map(sin(theta + (TWO_PI / num) * i), -1, 1, .5, 2);
+  var sz = random(20, 50) * m;
+  push();
+  scale(sc);
+  translate(x, y);
+  rotate(rotation);
+  //fill('rgba(255,73,86,.8)');
+  fill(224, 216, 181,60);
+  if (random(1) > .8) fill(181, 209, 224,60);//fill('rgba(189,21,80, .8)');
+  if (random(1) > .9) fill(208, 181, 224,60);//fill('rgba(213,255,107, .8)');
+  ellipse(0, -time * height + height, sz, sz);
+  ellipse(0, -time * height, sz, sz);
   pop();
 }
