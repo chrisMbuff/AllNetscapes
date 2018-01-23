@@ -1,6 +1,8 @@
 /*
+  by SF
+  REFERENCES:
   code built with help from Chris Booth
-  Modified dle code for sending to DB
+  Modified from dle code for sending to DB 
   includes code referenced from BSP documentation - blluetooth-serial-port https://www.npmjs.com/package/bluetooth-serial-port
   & ref from express docs - https://expressjs.com/en/guide/routing.html / https://expressjs.com/en/4x/api.html
   & json body parser - https://www.npmjs.com/package/body-parser-json
@@ -9,16 +11,16 @@
 */
 
 var express = require('express');
-var app = express();
+var app = express(); //include express/setup
 
-var path = require('path');
-var MongoClient = require('mongodb').MongoClient
+var path = require('path'); //path data will go
+var MongoClient = require('mongodb').MongoClient //include mongoDB connection client
 
-var db = require('./config/db.js');
+var db = require('./config/db.js'); //require DB access creds/link .etc - omitted from this file for security
 
 //below: Create bluetooth connection
 var btConn = require('bluetooth-serial-port');  // include Bluetooth serial
-var serial = new btConn.BluetoothSerialPort();
+var serial = new btConn.BluetoothSerialPort(); //open connectoions
 var btAddress;
 
 
@@ -37,22 +39,22 @@ serial.inquire(); //Start searching for bluetooth device - asynchronous/runs in 
 
 
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname+'/range_sliders'));
+app.use(bodyParser.urlencoded({ extended: true })); //from parser documentation
+app.use(express.static(__dirname+'/range_sliders'));  //dir of project folder
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/range_sliders/index.html'));
-  //__dirname : It will resolve to your project folder.
+  //__dirname : It will resolve to your project folder. - from docs
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3000, () => console.log('Example app listening on port 3000!')); //from docs
 
-app.post('/add', (req, res) => {
+app.post('/add', (req, res) => { //from docs
     serial.write(new Buffer('a', 'utf-8'), function(err, bytesWritten) { //write to bluetooth device - 'b' is begin RGB & breathe
         });
-  res.redirect('/index.html');
+  res.redirect('/index.html'); //refresh
 
-    var name = "Steph";
+    var name = "Steph"; //assign values - 
     var careIn = req.body.careIn;
     var orgaIn = req.body.orgaIn;
     var discIn = req.body.discIn;
@@ -74,12 +76,12 @@ app.post('/add', (req, res) => {
     var affIn = req.body.affIn;
 
     console.log("Write to database")
-    console.log(req.body.orgaIn)
+    console.log(req.body.orgaIn) //debug
 
     //format the data for the mongoDB
-    var mongoLog = [{
-        "name": "Steph",
-        "Data_Canoe": {
+    var mongoLog = [{ 
+        "name": "Steph", //for ID purposes on input
+        "Data_Canoe": { //ref from DLE code
             "Conscientiousness": {
         "Care": req.body.careIn,
         "Orga": req.body.orgaIn,
@@ -109,13 +111,13 @@ app.post('/add', (req, res) => {
     }]
 
     //connect to the client
-    MongoClient.connect(db.url, function (err, db) {
+    MongoClient.connect(db.url, function (err, db) { //connect to mongoDB using creds in other file
         if(err){
             console.log(err);
         }
-        //Collection1 is the name of the db's collection
-        var col = db.collection('alldata');
-        //insert the results, and close the connection
+        //alldata is the db's collection where the input will go
+        var col = db.collection('alldata'); 
+        //insert the result then close the connection
         col.insert(mongoLog, function(err, result){
             db.close();
         });
