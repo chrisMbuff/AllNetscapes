@@ -1,3 +1,5 @@
+//code is from codepen.io by Sean Stopnik
+//Available at:https://codepen.io/seanstopnik/pen/CeLqA
 var rangeSlider = function(){
   var slider = $('.range-slider'),
       range = $('.range-slider__range'),
