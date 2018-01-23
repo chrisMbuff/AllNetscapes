@@ -186,57 +186,57 @@ function drawA(i) {
     {
     if(help == 8) {
       sz = random(kind*50) * m;
-      reds = map((kind * i),0,8,0,190);
-      blues = map((trust * i),0,8,0,90);
+      reds = map((kind * i),0,8,0,38);
+      blues = map((trust * i),0,8,51,81);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 7) {
       sz = random(kind*50) * m;
-      reds = map((kind * i),0,8,0,200);
-      blues = map((trust * i),0,8,0,100);
+      reds = map((kind * i),0,8,38,58);
+      blues = map((trust * i),0,8,81,97);
       fill(reds,15,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 6) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,210);
-      blues = map((trust * i),0,8,0,110);
+      reds = map((kind * i),0,8,58,71);
+      blues = map((trust * i),0,8,97,108);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 5) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,220);
-      blues = map((trust * i),0,8,0,120);
+      reds = map((kind * i),0,8,71,86);
+      blues = map((trust * i),0,8,108,120);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 4) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,230);
-      blues = map((trust * i),0,8,0,130);
+      reds = map((kind * i),0,8,86,104);
+      blues = map((trust * i),0,8,120,134);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 3) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,240);
-      blues = map((trust * i),0,8,0,150);
+      reds = map((kind * i),0,8,104,122);
+      blues = map((trust * i),0,8,134,148);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 2) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,250);
-      blues = map((trust * i),0,8,0,160);
+      reds = map((kind * i),0,8,122,132);
+      blues = map((trust * i),0,8,148,157);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
     else if (help == 1) {
       sz = random(kind*60) * m;
-      reds = map((kind * i),0,8,0,260);
-      blues = map((trust * i),0,8,0,255);
+      reds = map((kind * i),0,8,132,147);
+      blues = map((trust * i),0,8,157,169);
       fill(reds,255,blues,random(255));
       ellipse(550, 100, sz, sz);
     }
